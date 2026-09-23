@@ -89,25 +89,25 @@ Image dimensions were also analyzed because the original dataset contains images
 
 All images were converted to RGB format and resized to:
 
-text
-224 × 224 pixels
-```
-
-## Model Weights
-
-The finetuned ResNet18 weights are too large for GitHub and are hosted on Hugging Face:
-
-**[Download oxford_pet_resnet18_finetuned.pth](https://huggingface.co/RhythmThapa/oxford-pet-resnet18/resolve/main/oxford_pet_resnet18_finetuned.pth)**
-
-### Loading the model
-```python
-from huggingface_hub import hf_hub_download
-import torch
-
-model_path = hf_hub_download(
-    repo_id="RhythmThapa/oxford-pet-resnet18",
-    filename="oxford_pet_resnet18_finetuned.pth"
-)
-model.load_state_dict(torch.load(model_path, map_location="cpu"))
-model.eval()
-```
+92  ```text
+93  224 × 224 pixels
+94  ```
+95
+96  ## Model Weights
+97
+98  The finetuned ResNet18 weights are too large for GitHub and are hosted on Hugging Face:
+99
+100 **[Download oxford_pet_resnet18_finetuned.pth](https://huggingface.co/RhythmThapa/oxford-pet-resnet18/resolve/main/oxford_pet_resnet18_finetuned.pth)**
+101
+102 ### Loading the model
+103 ```python
+104 from huggingface_hub import hf_hub_download
+105 import torch
+106
+107 model_path = hf_hub_download(
+108     repo_id="RhythmThapa/oxford-pet-resnet18",
+109     filename="oxford_pet_resnet18_finetuned.pth"
+110 )
+111 model.load_state_dict(torch.load(model_path, map_location="cpu"))
+112 model.eval()
+113 ```
