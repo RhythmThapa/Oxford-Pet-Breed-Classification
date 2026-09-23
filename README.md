@@ -89,8 +89,9 @@ Image dimensions were also analyzed because the original dataset contains images
 
 All images were converted to RGB format and resized to:
 
-```text
+text
 224 × 224 pixels
+```
 
 ## Model Weights
 
